@@ -1,0 +1,215 @@
+/* =========================================================
+   KT – Woo Checkout styled to sit inside Travel Monster WTE flow
+   ========================================================= */
+
+body.woocommerce-checkout .kt-wte-woo-checkout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 14px;
+}
+
+/* Let the theme own the box layout; just ensure Woo doesn't inject ugly spacing */
+body.woocommerce-checkout form.checkout {
+  margin: 0;
+}
+
+/* Hide duplicate Woo headings (theme already gives structure) */
+body.woocommerce-checkout .woocommerce-billing-fields > h3,
+body.woocommerce-checkout .woocommerce-additional-fields > h3,
+body.woocommerce-checkout #order_review_heading {
+  display: none !important;
+}
+
+/* Make Woo form rows feel like WTE controls */
+body.woocommerce-checkout .wpte-bf-checkout-form .form-row {
+  margin: 0 0 16px !important;
+}
+
+body.woocommerce-checkout .wpte-bf-checkout-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+body.woocommerce-checkout .wpte-bf-checkout-form input.input-text,
+body.woocommerce-checkout .wpte-bf-checkout-form select,
+body.woocommerce-checkout .wpte-bf-checkout-form textarea {
+  width: 100%;
+  border: 1px solid rgba(125, 137, 175, 0.35);
+  border-radius: 7px;
+  padding: 12px 14px;
+  background: #fff;
+  outline: none;
+}
+
+body.woocommerce-checkout .wpte-bf-checkout-form input.input-text:focus,
+body.woocommerce-checkout .wpte-bf-checkout-form select:focus,
+body.woocommerce-checkout .wpte-bf-checkout-form textarea:focus {
+  border-color: rgba(27, 126, 255, 0.85);
+}
+
+/* Checkboxes (snoring disclaimer) */
+/* Make Woo checkbox look like a real clickable checkbox */
+body.woocommerce-checkout .wpte-bf-checkout-form .woocommerce-form__label-for-checkbox{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: 12px 12px;
+  border: 10px solid rgba(125,137,175,0.25);
+  border-radius: 50px;
+  background: #fff;
+}
+
+body.woocommerce-checkout .wpte-bf-checkout-form .woocommerce-form__label-for-checkbox input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  flex: 0 0 18px;
+  accent-color: #1b7eff; /* modern browsers */
+  cursor: pointer;
+}
+
+body.woocommerce-checkout .wpte-bf-checkout-form .woocommerce-form__label-for-checkbox span{
+  display: block;
+  line-height: 1.35;
+}
+
+/* Passport upload block */
+body.woocommerce-checkout .kt-passport-upload {
+  margin-top: 18px;
+}
+body.woocommerce-checkout .kt-passport-upload .required {
+  color: #d63638;
+}
+body.woocommerce-checkout .kt-passport-upload .kt-help {
+  margin: 6px 0 10px;
+  opacity: .8;
+}
+body.woocommerce-checkout .kt-passport-upload input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px dashed rgba(125, 137, 175, 0.55);
+  border-radius: 7px;
+  background: #fafafe;
+}
+body.woocommerce-checkout .kt-upload-status {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Order review table cleanup inside the summary card */
+body.woocommerce-checkout .wpte-bf-summary-wrap table.shop_table {
+  border: 0 !important;
+  border-collapse: collapse !important;
+  width: 100%;
+  margin: 0;
+}
+body.woocommerce-checkout .wpte-bf-summary-wrap table.shop_table th,
+body.woocommerce-checkout .wpte-bf-summary-wrap table.shop_table td {
+  border: 0 !important;
+  padding: 10px 0 !important;
+  vertical-align: top;
+}
+body.woocommerce-checkout .wpte-bf-summary-wrap table.shop_table tbody tr,
+body.woocommerce-checkout .wpte-bf-summary-wrap table.shop_table tfoot tr {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+body.woocommerce-checkout .wpte-bf-summary-wrap table.shop_table tfoot tr:last-child {
+  border-bottom: 0;
+}
+
+/* Payment methods: remove Woo grey panels */
+body.woocommerce-checkout .wpte-bf-summary-wrap #payment {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin-top: 18px;
+}
+body.woocommerce-checkout .wpte-bf-summary-wrap #payment ul.payment_methods {
+  border-radius: 7px;
+  padding: 16px !important;
+  border: 1px solid rgba(125, 137, 175, 0.25) !important;
+  background: #fff !important;
+}
+body.woocommerce-checkout .wpte-bf-summary-wrap #payment div.payment_box {
+  border-radius: 7px;
+}
+
+/* Deposit/full box styled like a small WTE section */
+body.woocommerce-checkout .kt-payment-choice {
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 7px;
+  border: 1px solid rgba(125, 137, 175, 0.25);
+  background: #fff;
+}
+body.woocommerce-checkout .kt-payment-choice h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+body.woocommerce-checkout .kt-payment-choice .kt-radio {
+  display: block;
+  margin: 12px 0;
+}
+body.woocommerce-checkout .kt-payment-choice .kt-radio input{
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+body.woocommerce-checkout .kt-payment-choice .kt-radio span{
+  display: inline;
+}
+body.woocommerce-checkout .kt-payment-breakdown {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 14px;
+  opacity: .95;
+}
+
+/* Thank you status box */
+body.woocommerce-order-received .kt-thankyou-status {
+  margin: 18px 0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(125, 137, 175, 0.25);
+  background: #fff;
+}
+
+
+/* ✅ Snoring disclaimer checkbox (your custom field) */
+body.woocommerce-checkout #billing_snoring_disclaimer_field .woocommerce-input-wrapper > label.checkbox{
+  display: flex !important;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: 12px 12px;
+  border: 1px solid rgba(125,137,175,0.25);
+  border-radius: 7px;
+  background: #fff;
+  margin: 0 !important;
+}
+
+body.woocommerce-checkout #billing_snoring_disclaimer_field .woocommerce-input-wrapper > label.checkbox > input[type="checkbox"]{
+  width: 18px !important;
+  height: 18px !important;
+  margin: 2px 0 0 !important;
+  flex: 0 0 18px;
+  accent-color: #1b7eff;
+  cursor: pointer;
+}
+
+/* Optional: tidy the required star spacing */
+body.woocommerce-checkout #billing_snoring_disclaimer_field .woocommerce-input-wrapper > label.checkbox .required{
+  margin-left: 6px;
+}
+
+body.woocommerce-checkout #billing_snoring_disclaimer_field input[type="checkbox"]{
+  appearance: auto !important;
+  -webkit-appearance: checkbox !important;
+  opacity: 1 !important;
+  position: static !important;
+}
+
+
